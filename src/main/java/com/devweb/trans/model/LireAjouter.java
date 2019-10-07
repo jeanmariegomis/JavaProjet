@@ -11,6 +11,10 @@ public class LireAjouter {
         this.ajouter = ajouter;
     }
 
+    public LireAjouter(int Status, String msg) {
+
+    }
+
     public int getStatus() {
         return status;
     }

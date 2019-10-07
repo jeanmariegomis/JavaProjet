@@ -26,6 +26,7 @@ public class Entreprise {
     private String phone;
     private String emailentr;
 
+    public Entreprise() {} //constructeur par defaut
     public Entreprise(String adresse,String ninea, String raisonsociale, String status,  String phone, String emailentr ) {
         this.adresse = adresse;
         this.ninea = ninea;
@@ -33,7 +34,6 @@ public class Entreprise {
         this.status = status;
         this.phone = phone;
         this.emailentr = emailentr;
-
     }
 
     public String getEmailentr() {

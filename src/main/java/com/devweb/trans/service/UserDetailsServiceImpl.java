@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
-
+    private User userConnecte;
     @Autowired
     UserRepository userRepository;
 
@@ -22,7 +22,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         User user = userRepository.findByUsername(username).orElseThrow(
                 () -> new UsernameNotFoundException("User Not Found with -> username or email : " + username));
-
+        this.userConnecte=user;
         return UserPrinciple.build(user);
+    }
+    public User getUserConnecte() {//pour recuperer l utilisateur connecte
+        return userConnecte;
     }
 }

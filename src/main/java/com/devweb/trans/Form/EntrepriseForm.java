@@ -14,6 +14,15 @@ public class EntrepriseForm {
     private String nci;
     private String emailentr;
     private String phone;
+    private int role;
+
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
+    }
 
     public EntrepriseForm() {
     }
@@ -121,4 +130,6 @@ public class EntrepriseForm {
     public void setNci(String nci) {
         this.nci = nci;
     }
+
+
 }

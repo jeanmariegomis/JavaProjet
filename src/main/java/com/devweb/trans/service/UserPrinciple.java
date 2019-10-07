@@ -14,7 +14,15 @@ import java.util.stream.Collectors;
 public class UserPrinciple implements UserDetails {
     private static final long serialVersionUID = 1L;
 
-    private int id;
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     private String name;
 
@@ -27,15 +35,11 @@ public class UserPrinciple implements UserDetails {
 
     private Collection<? extends GrantedAuthority> authorities;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
-    public UserPrinciple(int id, String name,
+
+
+    public UserPrinciple(Long id, String name,
                          String username, String email, String password,
                          Collection<? extends GrantedAuthority> authorities) {
         this.id = id;

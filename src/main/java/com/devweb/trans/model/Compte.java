@@ -1,5 +1,6 @@
 package com.devweb.trans.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -16,7 +17,16 @@ public class Compte {
     @Column(length = 50)
     private String numerocompte;
 
-    private String solde;
+    private int solde;
+
+    public int getSolde() {
+        return solde;
+    }
+
+    public void setSolde(int solde) {
+        this.solde = solde;
+    }
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
     private Entreprise entreprise;
@@ -45,11 +55,7 @@ public class Compte {
         this.numerocompte = numerocompte;
     }
 
-    public String getSolde() {
-        return solde;
-    }
 
-    public void setSolde(String solde) {
-        this.solde = solde;
-    }
+
+
 }

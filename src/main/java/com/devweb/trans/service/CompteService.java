@@ -23,7 +23,7 @@ public class CompteService {
     public Optional<Compte> findById(int id){
         return compteRepository.findById(id);
     }
-    public Optional<Compte> findByNumerocompte(String numerocompte){
+    public Optional<Compte> findCompteByNumerocompte(String numerocompte){
         return compteRepository.findCompteByNumerocompte(numerocompte);
     }
 }
