@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface EntrepriseRepository extends JpaRepository<Entreprise, Integer> {
-    @Query("SELECT e FROM Entreprise e WHERE e.raisonsociale <> 'Transfert' AND e.raisonsociale <> 'Etat du Sénégal' ")
+    @Query("SELECT e FROM Entreprise e WHERE e.raisonsociale <> 'Wari' ")
     public List<Entreprise> findEntreprise();
 }
